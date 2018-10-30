@@ -49,12 +49,15 @@ if(CMAKE_SYSTEM_NAME MATCHES "SunOS")
   set(SUNOS ON CACHE INTERNAL "")
 endif()
 
-if(CMAKE_SIZEOF_VOID_P EQUAL 8)
-  set(IS64BIT 1)
-  message("Using 64bit generator")
-else()
-  message("Using 32bit genereator")
-endif()
+set(IS64BIT 1)
+message("Using 64 bit generator FORCED")
+
+#if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+#  set(IS64BIT 1)
+#  message("Using 64bit generator")
+#else()
+#  message("Using 32bit genereator")
+#endif()
 
 #
 # On Windows, set VS to "vsNN" where NN is the MSVC version.

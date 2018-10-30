@@ -189,7 +189,6 @@ endif()
 # Set CONCPP_LIBS
 
 if(CONCPP_LIB)
-  list(APPEND CONCPP_LIBS optimized "${CONCPP_LIB}")
   if(NOT CONCPP_LIB_DEBUG)
     if(WIN32 AND BUILD_STATIC)
       message(WARNING "Could not find debug libraries, building in debug mode will not work")
@@ -242,7 +241,6 @@ endif()
 
 
 if(CONCPP_JDBC)
-  list(APPEND CONCPP_JDBC_LIBS optimized "${CONCPP_JDBC}")
   if(NOT CONCPP_JDBC_DEBUG)
     if(WIN32 AND BUILD_STATIC)
       message(WARNING "Could not find debug libraries, building in debug mode will not work")
